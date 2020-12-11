@@ -22,15 +22,21 @@ import javafx.scene.Node;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.StrokeLineCap;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
 import java.math.BigDecimal;
+import java.time.LocalTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoField;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 //import javafx.scene.canvas.Canvas;
 //import javafx.scene.canvas.GraphicsContext;
@@ -448,7 +454,7 @@ public class Helper {
         double               minorTickSpace        = GAUGE.getMinorTickSpace();
         double               tmpAngleStep          = ANGLE_STEP * minorTickSpace;
         TickLabelOrientation tickLabelOrientation  = GAUGE.getTickLabelOrientation();
-        TickLabelLocation tickLabelLocation     = GAUGE.getTickLabelLocation();
+        TickLabelLocation    tickLabelLocation     = GAUGE.getTickLabelLocation();
         BigDecimal minorTickSpaceBD      = BigDecimal.valueOf(minorTickSpace);
         BigDecimal majorTickSpaceBD      = BigDecimal.valueOf(GAUGE.getMajorTickSpace());
         BigDecimal mediumCheck2          = BigDecimal.valueOf(2 * minorTickSpace);
@@ -1082,7 +1088,6 @@ public class Helper {
     }
 */
 
-/*
     public static final void drawTimeSections(final Clock CLOCK, final GraphicsContext CTX, final List<TimeSection> SECTIONS, final double SIZE,
                                               final double XY_INSIDE, final double XY_OUTSIDE, final double WH_INSIDE, final double WH_OUTSIDE,
                                               final double LINE_WIDTH) {
@@ -1110,11 +1115,9 @@ public class Helper {
                 // check if start was already yesterday
                 if (start.getHour() > stop.getHour()) { sectionAngleExtend = (360.0 - Math.abs(sectionAngleExtend)); }
                 CTX.save();
-                */
-/*if (highlightSections) {
+                /*if (highlightSections) {
                     CTX.setStroke(section.contains(time.toLocalTime()) ? section.getHighlightColor() : section.getColor());
-                } else*//*
- {
+                } else*/ {
                     CTX.setStroke(section.getColor());
                 }
                 CTX.setLineWidth(SIZE * LINE_WIDTH);
@@ -1151,11 +1154,9 @@ public class Helper {
                 // check if start was already yesterday
                 if (start.getHour() > stop.getHour()) { areaAngleExtend = (360.0 - Math.abs(areaAngleExtend)); }
                 CTX.save();
-                */
-/*if (highlightAreas) {
+                /*if (highlightAreas) {
                     CTX.setFill(area.contains(time.toLocalTime()) ? area.getHighlightColor() : area.getColor());
-                } else*//*
- {
+                } else*/ {
                     CTX.setFill(area.getColor());
                 }
                 CTX.fillArc(xy, xy, wh, wh, -(offset + areaStartAngle), -areaAngleExtend, ArcType.ROUND);
@@ -1186,30 +1187,27 @@ public class Helper {
                 //dot.setOnMousePressed(e -> alarm.fireAlarmMarkerEvent(alarm.ALARM_MARKER_PRESSED_EVENT));
                 //dot.setOnMouseReleased(e -> alarm.fireAlarmMarkerEvent(alarm.ALARM_MARKER_RELEASED_EVENT));
                 if (alarmTime.getDayOfMonth() == TIME.getDayOfMonth() &&
-                    alarmTime.getMonthValue() == TIME.getMonthValue() &&
-                    alarmTime.getYear() == TIME.getYear() &&
-                    alarmTime.getHour() == TIME.getHour() &&
-                    alarmTime.getMinute() >= TIME.getMinute()) {
+                        alarmTime.getMonthValue() == TIME.getMonthValue() &&
+                        alarmTime.getYear() == TIME.getYear() &&
+                        alarmTime.getHour() == TIME.getHour() &&
+                        alarmTime.getMinute() >= TIME.getMinute()) {
                     dot.setManaged(true);
                     dot.setVisible(true);
                 } else {
                     dot.setManaged(false);
                     dot.setVisible(false);
                 }
-                */
-/*Tooltip alarmTooltip;
+                /*Tooltip alarmTooltip;
                 if (alarm.getText().isEmpty()) {
                     alarmTooltip = new Tooltip(DATE_TIME_FORMATTER.format(alarm.getTime()));
                 } else {
                     alarmTooltip = new Tooltip(new StringBuilder(alarm.getText()).append("\n").append(DATE_TIME_FORMATTER.format(alarm.getTime())).toString());
                 }
                 alarmTooltip.setTextAlignment(TextAlignment.CENTER);
-                Tooltip.install(dot, alarmTooltip);*//*
-
+                Tooltip.install(dot, alarmTooltip);*/
             }
         }
     }
-*/
 
     public static final String formatNumber(final Gauge GAUGE, final double VALUE) {
         return formatNumber(GAUGE.getLocale(), null/*GAUGE.getFormatString()*/, GAUGE.getDecimals(), VALUE);
