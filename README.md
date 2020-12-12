@@ -5,7 +5,7 @@ Used by the following demos:
 * [Medusa Clock][webfx-medusaclock-demo-link] ([Github repository][webfx-medusaclock-repo-link]) in the settings
 
 [hansolo-medusa-link]: https://github.com/HanSolo/Medusa
-[webfx-moderngauge-demo-link]: https://webfx-moderngauge-demo.netlify.app
+[webfx-moderngauge-demo-link]: https://moderngauge.webfx-project.org
 [webfx-moderngauge-repo-link]: https://github.com/webfx-project/webfx-demo-moderngauge
-[webfx-medusaclock-demo-link]: https://webfx-medusaclock-demo.netlify.app
+[webfx-medusaclock-demo-link]: https://medusaclock.webfx-project.org
 [webfx-medusaclock-repo-link]: https://github.com/webfx-project/webfx-demo-medusaclock
