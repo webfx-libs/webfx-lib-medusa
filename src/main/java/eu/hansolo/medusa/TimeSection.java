@@ -26,7 +26,7 @@ import javafx.event.EventTarget;
 import javafx.event.EventType;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
-import webfx.platform.shared.util.uuid.Uuid;
+import dev.webfx.platform.shared.util.uuid.Uuid;
 
 import java.time.LocalTime;
 
