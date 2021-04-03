@@ -7,7 +7,6 @@ module webfx.lib.medusa {
     requires javafx.base;
     requires javafx.controls;
     requires javafx.graphics;
-    requires webfx.platform.shared.log;
     requires webfx.platform.shared.util;
 
     // Exported packages
