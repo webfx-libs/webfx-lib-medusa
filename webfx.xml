@@ -46,13 +46,7 @@
             </exported-packages>
 
             <dependencies>
-                <used-by-source-modules>
-                    <module>java.base</module>
-                    <module>webfx-kit-javafxbase-emul</module>
-                    <module>webfx-kit-javafxcontrols-emul</module>
-                    <module>webfx-kit-javafxgraphics-emul</module>
-                    <module>webfx-platform-shared-util</module>
-                </used-by-source-modules>
+                <used-by-source-modules/>
             </dependencies>
 
             <source-packages>
@@ -62,7 +56,23 @@
                 <package>eu.hansolo.medusa.events</package>
             </source-packages>
 
+            <used-by-source-modules>
+                <module>java.base</module>
+                <module>webfx-kit-javafxbase-emul</module>
+                <module>webfx-kit-javafxcontrols-emul</module>
+                <module>webfx-kit-javafxgraphics-emul</module>
+                <module>webfx-platform-shared-util</module>
+            </used-by-source-modules>
+
         </project>
+
+        <usages>
+
+            <java-package name="java.util.regex"/>
+
+            <java-class name="javafx.scene.control.ScrollPane"/>
+
+        </usages>
 
     </export-snapshot>
 
