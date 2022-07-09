@@ -51,9 +51,9 @@
 
             <source-packages>
                 <package>eu.hansolo.medusa</package>
-                <package>eu.hansolo.medusa.tools</package>
-                <package>eu.hansolo.medusa.skins</package>
                 <package>eu.hansolo.medusa.events</package>
+                <package>eu.hansolo.medusa.skins</package>
+                <package>eu.hansolo.medusa.tools</package>
             </source-packages>
 
             <used-by-source-modules>
