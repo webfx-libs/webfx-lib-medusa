@@ -61,7 +61,7 @@
                 <module>webfx-kit-javafxbase-emul</module>
                 <module>webfx-kit-javafxcontrols-emul</module>
                 <module>webfx-kit-javafxgraphics-emul</module>
-                <module>webfx-platform-shared-util</module>
+                <module>webfx-platform-util</module>
             </used-by-source-modules>
 
         </project>

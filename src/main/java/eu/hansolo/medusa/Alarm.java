@@ -25,7 +25,7 @@ import javafx.event.EventHandler;
 import javafx.event.EventTarget;
 import javafx.event.EventType;
 import javafx.scene.paint.Color;
-import dev.webfx.platform.shared.util.uuid.Uuid;
+import dev.webfx.platform.util.uuid.Uuid;
 
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;

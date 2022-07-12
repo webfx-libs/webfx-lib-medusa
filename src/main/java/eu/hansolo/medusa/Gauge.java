@@ -45,7 +45,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
-import dev.webfx.platform.shared.util.uuid.Uuid;
+import dev.webfx.platform.util.uuid.Uuid;
 
 import java.time.Instant;
 import java.util.*;
