@@ -1,4 +1,4 @@
-A partial WebFx port of the [Medusa][hansolo-medusa-link] JavaFx library.
+A partial WebFX port of the [Medusa][hansolo-medusa-link] JavaFX library.
 
 Used by the following demos:
 * [Modern Gauge][webfx-moderngauge-demo-link] ([Github repository][webfx-moderngauge-repo-link]) for the counter

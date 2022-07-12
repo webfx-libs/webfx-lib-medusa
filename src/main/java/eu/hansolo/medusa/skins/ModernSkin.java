@@ -775,7 +775,7 @@ public class ModernSkin extends GaugeSkinBase {
             needle.relocate(needle.getLayoutBounds().getMinX(), needle.getLayoutBounds().getMinY());
             needleRotate.setPivotX(size * 0.5);
             needleRotate.setPivotY(size * 0.5);
-            // Added these 3 lines of code to make WebFx react to the above changes (as not auto-reacting yet)
+            // Added these 3 lines of code to make WebFX react to the above changes (as not auto-reacting yet)
             List<PathElement> elements = new ArrayList<>(needle.getElements());
             needle.getElements().clear();
             needle.getElements().setAll(elements);
