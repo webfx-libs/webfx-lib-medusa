@@ -18,6 +18,7 @@
 
 package eu.hansolo.medusa.skins;
 
+import dev.webfx.platform.uischeduler.UiScheduler;
 import eu.hansolo.medusa.Fonts;
 import eu.hansolo.medusa.Gauge;
 import eu.hansolo.medusa.TickLabelOrientation;
@@ -662,6 +663,8 @@ public class ModernSkin extends GaugeSkinBase {
         valueText.setFont(Fonts.latoRegular(fontSize));
         //if (valueText.getBoundsInLocal().getWidth() > maxWidth) { Helper.adjustTextSize(valueText, maxWidth, fontSize); }
         valueText.setLayoutX((size - valueText.getLayoutBounds().getWidth()) * 0.5);
+        // WebFX addition because valueText.getLayoutBounds() may not be correct until it's updated by the mapper
+        UiScheduler.scheduleInAnimationFrame(() -> valueText.setLayoutX((size - valueText.getLayoutBounds().getWidth()) * 0.5), 1);
 
         maxWidth = 0.28 * size;
         subTitleText.setText(gauge.getSubTitle());
