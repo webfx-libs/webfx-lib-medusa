@@ -16,10 +16,13 @@
 
 package eu.hansolo.medusa;
 
-import eu.hansolo.medusa.events.AlarmEvent;
-import eu.hansolo.medusa.events.AlarmEventListener;
+import eu.hansolo.medusa.events.*;
+import eu.hansolo.medusa.events.TimeEvent.TimeEventType;
+import eu.hansolo.medusa.events.UpdateEvent.EventType;
 import eu.hansolo.medusa.skins.ClockSkin;
 import eu.hansolo.medusa.skins.DBClockSkin;
+import eu.hansolo.medusa.tools.Helper;
+import eu.hansolo.medusa.tools.TimeSectionComparator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -33,12 +36,6 @@ import javafx.scene.control.Skin;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
-import eu.hansolo.medusa.TickLabelLocation;
-import eu.hansolo.medusa.events.*;
-import eu.hansolo.medusa.events.TimeEvent.TimeEventType;
-import eu.hansolo.medusa.events.UpdateEvent.EventType;
-import eu.hansolo.medusa.tools.Helper;
-import eu.hansolo.medusa.tools.TimeSectionComparator;
 
 import java.time.*;
 import java.util.*;
@@ -282,7 +279,7 @@ public class Clock extends Control {
         _lcdCrystalEnabled      = false;
         _shadowsEnabled         = false;
         _lcdFont                = LcdFont.DIGITAL_BOLD;
-        _locale                 = Locale.US;
+        _locale                 = Locale.getDefault();
         _tickLabelLocation      = eu.hansolo.medusa.TickLabelLocation.INSIDE;
         _animated               = false;
         animationDuration       = 10000;
