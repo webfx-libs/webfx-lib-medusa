@@ -109,7 +109,7 @@ public class MorphingClockSkin extends ClockSkinBase {
         minRight       = 0;
         secLeft        = 0;
         secRight       = 0;
-        step           = 0;
+        step           = 7;
         lastTimerCall  = 0; //System.nanoTime();
         timer          = new AnimationTimer() {
             @Override
