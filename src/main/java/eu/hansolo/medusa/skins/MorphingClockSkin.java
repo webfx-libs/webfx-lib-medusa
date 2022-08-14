@@ -47,9 +47,9 @@ public class MorphingClockSkin extends ClockSkinBase {
     private                double            height;
     private Pane pane;
     private Canvas canvas;
-    private GraphicsContext ctx;
-    private                double            dotSize;
-    private                double            spacer;
+    protected GraphicsContext ctx;
+    protected              double            dotSize;
+    protected              double            spacer;
     private                double            digitSpacer;
     private                double            digitWidth;
     private                double            digitHeight;
@@ -215,7 +215,7 @@ public class MorphingClockSkin extends ClockSkinBase {
         drawMatrix(5 * digitWidth + 7 * digitSpacer, 0, sr, secondGradient, secondOffGradient);
     }
 
-    private void drawMatrix(final double X, final double Y, final int[][] MATRIX, final Paint ON_PAINT, final Paint OFF_PAINT) {
+    protected void drawMatrix(final double X, final double Y, final int[][] MATRIX, final Paint ON_PAINT, final Paint OFF_PAINT) {
         double  x;
         double  y = Y;
         boolean fill;
