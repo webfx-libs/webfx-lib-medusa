@@ -436,7 +436,7 @@ public class ModernSkin extends GaugeSkinBase {
         double barWH = size * 0.75;
 
         CTX.save();
-        CTX.setEffect(glow2);
+        //CTX.setEffect(glow2); // Temporary commented as this makes Gluon native app crash
         CTX.setStroke(highlightColor);
         CTX.setLineWidth(size * 0.01666667);
         CTX.setLineCap(StrokeLineCap.BUTT);
