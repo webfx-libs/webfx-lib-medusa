@@ -18,6 +18,7 @@
 
 package eu.hansolo.medusa.skins;
 
+import dev.webfx.platform.os.OperatingSystem;
 import dev.webfx.platform.uischeduler.UiScheduler;
 import eu.hansolo.medusa.Fonts;
 import eu.hansolo.medusa.Gauge;
@@ -440,7 +441,8 @@ public class ModernSkin extends GaugeSkinBase {
         double barWH = size * 0.75;
 
         CTX.save();
-        //CTX.setEffect(glow2); // Temporary commented as this makes Gluon native app crash
+        if (!OperatingSystem.isMobile()) // because CTX.setEffect(glow2) makes Gluon mobile app crash
+            CTX.setEffect(glow2);
         CTX.setStroke(highlightColor);
         CTX.setLineWidth(size * 0.01666667);
         CTX.setLineCap(StrokeLineCap.BUTT);
