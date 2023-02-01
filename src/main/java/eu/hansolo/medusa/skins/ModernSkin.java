@@ -345,14 +345,18 @@ public class ModernSkin extends GaugeSkinBase {
         placeTextVerticaly();
 */
 
-        if ( gauge.isThresholdVisible() && VALUE > gauge.getThreshold() ) {
+        updateGlowsColor();
+        highlightValue(tickMarkCtx, VALUE);
+    }
+
+    private void updateGlowsColor() {
+        if (gauge.isThresholdVisible() && gauge.getValue() > gauge.getThreshold() ) {
             glow2.setColor(thresholdColor);
             bigGlow.setColor(thresholdColor);
         } else {
             glow2.setColor(barColor);
             bigGlow.setColor(barColor);
         }
-        highlightValue(tickMarkCtx, VALUE);
     }
 
     private void highlightValue( final GraphicsContext CTX, final double CURRENT_VALUE ) {
@@ -837,5 +841,7 @@ public class ModernSkin extends GaugeSkinBase {
         mainCanvas.setCache(true);
         mainCanvas.setCacheHint(CacheHint.QUALITY);
         resizeText();
+
+        updateGlowsColor();
     }
 }
