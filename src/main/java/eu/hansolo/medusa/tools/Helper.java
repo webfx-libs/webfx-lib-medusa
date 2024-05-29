@@ -310,7 +310,7 @@ public class Helper {
     }*/
 
     public static final void enableNode(final Node NODE, final boolean ENABLE) {
-        NODE.setManaged(ENABLE);
+        NODE.setManaged(ENABLE && !(NODE instanceof Text)); // WebFX addition (to consider Text.getTextOrigin())
         NODE.setVisible(ENABLE);
     }
 
